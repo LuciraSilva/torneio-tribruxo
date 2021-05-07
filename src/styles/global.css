@@ -1,0 +1,18 @@
+:root {
+  --main-green: #1B682C;
+}
+* {
+  margin:  0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, button {
+  font-family: 'Galindo', cursive;
+}
+button {
+  cursor: pointer;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-transform: lowercase;
+  color: var(--main-green);
+}
