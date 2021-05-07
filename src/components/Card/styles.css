@@ -1,0 +1,24 @@
+.card {
+  padding: 1rem;
+  width: 200px;
+}
+.card h3,
+.card p {
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: -2rem;
+}
+.card h3 {
+    font-size: 0.875rem;
+}
+.card p {
+    font-size: 0.75rem;
+}
+.card img {
+  width: 110px;
+  height: 104px;
+  border-radius: 20%;
+  border: 3px solid var(--main-green);
+  transform: rotate(-20deg);
+  margin-top: 1.2rem;
+}

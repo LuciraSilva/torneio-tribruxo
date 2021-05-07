@@ -1,0 +1,9 @@
+.buttons {
+  width: 110px;
+  height: 104px;
+  border-radius: 20%;
+  border: 3px solid #F5E3E3;
+  background-color: var(--main-green);
+  transform: rotate(-20deg);
+  box-shadow: 1px 1px 5px black;
+}
