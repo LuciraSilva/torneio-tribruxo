@@ -17,7 +17,7 @@ class App extends Component {
 
     for (let i = 0; i < 4; i++) {
       let char = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-      let tem = (isFighting.some((fighter) => fighter.house === chars[char].house))
+      let tem = fighters.some((fighter) => fighter.house === chars[char].house);
       if (!tem) {
         fighters.push(chars[char]);
       }
