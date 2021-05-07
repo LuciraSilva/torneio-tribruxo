@@ -36,20 +36,5 @@
     max-width: 12rem;
     height: 12rem;
   }
-  .card-conteiner {
-    display: flex;
-    flex-flow: row wrap;
-    position: relative;
-    animation: mov 1s ease-in;
-  }
 
-  @keyframes mov {
-    from {
-      left: 0;
-      top: -50%;
-    }
-    to {
-      top: 0;
-    }
-  }
 }
