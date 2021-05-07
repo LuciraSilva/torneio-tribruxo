@@ -1,5 +1,5 @@
 :root {
-  --main-green: #1b682c;
+  --main-color: #8045c3;
 }
 * {
   margin: 0;
@@ -20,23 +20,51 @@ body::before {
 }
 body {
   height: 100vh;
+  border: 5px solid var(--main-color);
+  box-shadow: 10px 10px 100px inset var(--main-color);
 }
 #root {
   height: 100%;
 }
 body,
 button {
-  font-family: "Galindo", cursive;
+  font-family: "East Sea Dokdo", cursive;
 }
 button {
+  font-size: 1.2rem;
+  text-transform: uppercase;
   cursor: pointer;
+  animation: neon 1s infinite linear;
+  padding: 1rem;
 }
+button:hover,
+button:focus {
+  background-color: rgb(215, 192, 235);
+  border: 2px solid var(--main-color);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  text-transform: lowercase;
-  color: var(--main-green);
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+h1 {
+  font-size: 3rem;
+  color: var(--main-color);
+  animation: neon 1s infinite linear;
+}
+
+
+
+@keyframes neon {
+  from {
+    text-shadow: 10px 10px 20px rgb(176, 46, 216);
+  }
+  to {
+    text-shadow: 0px 0px rgb(215, 175, 228);
+  }
 }

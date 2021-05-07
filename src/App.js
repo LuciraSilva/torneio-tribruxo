@@ -19,18 +19,20 @@ class App extends Component {
 
     for (let i = 0; fighters.length < 4; i++) {
       let char = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-      let fighterSameHouse = fighters.some((fighter) => fighter.house === chars[char].house);
+      let fighterSameHouse = fighters.some(
+        (fighter) => fighter.house === chars[char].house
+      );
       if (!fighterSameHouse) {
         fighters.push(chars[char]);
       }
     }
-    this.setState({isFighting: fighters, screen: 3});
+    this.setState({ isFighting: fighters, screen: 3 });
   };
   generateWinner = () => {
     const { isFighting } = this.state;
     let winner = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
-    this.setState({ screen: 4, winner: isFighting[winner]});
-  }
+    this.setState({ screen: 4, winner: isFighting[winner] });
+  };
 
   componentDidMount = () => {
     fetch("http://hp-api.herokuapp.com/api/characters/students")
@@ -43,12 +45,11 @@ class App extends Component {
       <div className="App">
         {screen === 1 ? (
           <>
-            <Message>Bem-vindo(a) ao torneio tribruxo!</Message>
+            <h1>Bem-vindo(a) ao torneio tribruxo!</h1>
             <Button handleClick={this.handleStart}>Iniciar Jogo</Button>
           </>
         ) : screen === 2 ? (
           <>
-            <Message>Gere os chars</Message>
             <Button handleClick={this.handleChars}>Gerar bruxos</Button>
           </>
         ) : screen === 3 ? (
@@ -61,7 +62,9 @@ class App extends Component {
                 image={fighter.image}
               />
             ))}
-            <Button handleClick={this.generateWinner}>1, 2, 3... fighting</Button>
+            <Button handleClick={this.generateWinner}>
+              1, 2, 3... fighting
+            </Button>
           </>
         ) : (
           screen === 4 && (
