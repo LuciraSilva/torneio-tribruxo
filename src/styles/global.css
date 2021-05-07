@@ -18,6 +18,12 @@ body::before {
   filter: brightness(2);
   opacity: 0.4;
 }
+body {
+  height: 100vh;
+}
+#root {
+  height: 100%;
+}
 body,
 button {
   font-family: "Galindo", cursive;
