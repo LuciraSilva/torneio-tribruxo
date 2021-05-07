@@ -12,13 +12,13 @@ class App extends Component {
     this.setState({ screen: 2 });
   };
   handleChars = () => {
-    const { chars, isFighting } = this.state;
+    const { chars } = this.state;
     let fighters = [];
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; fighters.length < 4; i++) {
       let char = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-      let tem = fighters.some((fighter) => fighter.house === chars[char].house);
-      if (!tem) {
+      let fighterSameHouse = fighters.some((fighter) => fighter.house === chars[char].house);
+      if (!fighterSameHouse) {
         fighters.push(chars[char]);
       }
     }
@@ -31,7 +31,7 @@ class App extends Component {
       .then((response) => this.setState({ chars: response }));
   };
   render() {
-    const { screen, chars } = this.state;
+    const { screen } = this.state;
     return (
       <div className="App">
         {screen === 1 ? (
