@@ -1,4 +1,5 @@
 import { Component } from "react";
+import CardConteiner from "./components/CardConteiner";
 import Card from "./components/Card";
 import Button from "./components/Button";
 import "./styles/App.css";
@@ -53,14 +54,8 @@ class App extends Component {
           </>
         ) : screen === 3 ? (
           <>
-            {isFighting.map((fighter) => (
-              <Card
-                key={fighter.name}
-                name={fighter.name}
-                house={fighter.house}
-                image={fighter.image}
-              />
-            ))}
+            <CardConteiner isFighting={isFighting} />
+
             <Button handleClick={this.generateWinner}>
               1, 2, 3... fighting
             </Button>
