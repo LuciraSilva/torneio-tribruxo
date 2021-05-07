@@ -1,7 +1,6 @@
 import { Component } from "react";
-import Message from "./components/Message";
-import Button from "./components/Button";
 import Card from "./components/Card";
+import Button from "./components/Button";
 import "./styles/App.css";
 class App extends Component {
   state = {
@@ -74,7 +73,7 @@ class App extends Component {
                 house={winner.house}
                 image={winner.image}
               />
-              <Message>Vencedor</Message>
+              <h2 id="winner">Vencedor(a)</h2>
             </>
           )
         )}

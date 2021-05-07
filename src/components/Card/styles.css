@@ -1,6 +1,5 @@
 .card {
   padding: 1rem;
-  width: 200px;
 }
 .card h3,
 .card p {
@@ -9,10 +8,10 @@
   margin-left: -2rem;
 }
 .card h3 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 .card p {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 .card img {
   width: 110px;
@@ -23,4 +22,19 @@
   margin-top: 1.2rem;
   object-fit: cover;
   object-position: top center;
+}
+@media only screen and (min-width: 768px) {
+  .card h3 {
+    font-size: 2rem;
+  }
+  .card p {
+    font-size: 1.5rem;
+  }
+  .card img {
+    padding: 1rem;
+    width: 100%;
+    max-width: 12rem;
+    height: 12rem;
+  }
+
 }
